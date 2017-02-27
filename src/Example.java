@@ -15,7 +15,7 @@ public class Example {
 			client.setUseragent("Skypebot/1.0 (Windows NT 5.1; rv:19.0) Gecko/20100101 Firefox/19.0");
 			// client.port(443);
 			
-			System.out.println(client.Request("https://www.webresolver.nl", "ping").replace("<br />", "\r\n"));
+			System.out.println(client.Request("https://www.webresolver.nl", "geoip").replaceAll("(?i)<br */?>", "\r\n"));
 			
 		} catch (IOException e) {
 			
