@@ -18,7 +18,8 @@ import java.net.URL;
 import java.net.URLConnection;
 
 
-public class WebresolverAPI {
+public class WebresolverAPI
+{
 	private static String API_KEY;
 	private static String ConnOutput;
 	private static String useragent;
@@ -35,7 +36,7 @@ public class WebresolverAPI {
 	
 	public static void main(String[] args) { }
 	
-	public static String Request(String str, String tool) throws IOException
+	public String Request(String str, String tool) throws IOException
 	{
 		try {
 			URL wrurl = new URL("https://webresolver.nl/api.php?key=" + getKey() + "&action=" + tool + "&string=" + str + ((json) ? "&json" : "") + ((!port.equals(0)) ? "&port=" + port : ""));
