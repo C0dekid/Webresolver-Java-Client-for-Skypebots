@@ -1,7 +1,4 @@
 import java.io.IOException;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 import nl.webresolver.wrclient.*;
 
 public class Example {
@@ -19,7 +16,7 @@ public class Example {
 			
 		} catch (IOException e) {
 			
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 			
 		}
 	}
