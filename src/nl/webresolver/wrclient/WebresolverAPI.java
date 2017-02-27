@@ -22,6 +22,7 @@ public class WebresolverAPI {
 	private static String API_KEY;
 	private static String ConnOutput;
 	private static String useragent;
+	private static Integer port = 0;
 	public static Boolean json = true;
 		
 	/*
@@ -32,10 +33,13 @@ public class WebresolverAPI {
 	 * The tool you want to use e.g. 'resolve'
 	*/
 	
+	public static void main(String[] args) { }
+	
 	public static String Request(String str, String tool) throws IOException
 	{
 		try {
-			URL wrurl = new URL("https://webresolver.nl/api.php?key=" + getKey() + "&action=" + tool + "&string=" + str + ((json) ? "&json" : ""));
+			URL wrurl = new URL("https://webresolver.nl/api.php?key=" + getKey() + "&action=" + tool + "&string=" + str + ((json) ? "&json" : "") + ((!port.equals(0)) ? "&port=" + port : ""));
+			
 			URLConnection connection = (URLConnection) wrurl.openConnection();
 			
 			/*
@@ -66,6 +70,11 @@ public class WebresolverAPI {
 		}
 	}
 	
+	public void port(Integer port)
+	{
+		this.port = port;
+	}
+	
 	public void setUseragent(String string)
 	{
 		this.useragent = string;
@@ -76,7 +85,7 @@ public class WebresolverAPI {
 		this.json = bool;
 	}
 	
-	public void SetKey(String apikey)
+	public void setKey(String apikey)
 	{
 		this.API_KEY = apikey;
 	}
