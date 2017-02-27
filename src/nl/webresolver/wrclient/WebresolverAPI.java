@@ -72,31 +72,31 @@ public class WebresolverAPI {
 	
 	public void port(Integer port)
 	{
-		this.port = port;
+		WebresolverAPI.port = port;
 	}
 	
 	public void setUseragent(String string)
 	{
-		this.useragent = string;
+		WebresolverAPI.useragent = string;
 	}
 	
 	public void setJson(Boolean bool)
 	{
-		this.json = bool;
+		WebresolverAPI.json = bool;
 	}
 	
 	public void setKey(String apikey)
 	{
-		this.API_KEY = apikey;
+		WebresolverAPI.API_KEY = apikey;
 	}
 	
-	public static String getKey()
+	private static String getKey()
 	{
-		return API_KEY;
+		return WebresolverAPI.API_KEY;
 	}
 	
 	public static boolean isJson()
 	{
-		return json;
+		return WebresolverAPI.json;
 	}
 }
