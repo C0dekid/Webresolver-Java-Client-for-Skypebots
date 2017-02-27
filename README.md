@@ -17,3 +17,12 @@ use JSON, use `client.setJson(false)`. To set a custom useragent use:
 
 If you are using the portscan API, you can set a specific portnumber by using `client.port(number)` or leave it if you want to show
 all the ports.
+
+
+Summary of available commands:
+
+1. `.setKey("Your key")`
+2. `.setJson(boolean)`
+3. `.setUseragent(string)`
+4. `.port(integer)` (Only works with the portscan API)
+5. `.isJson()` boolean (true/false)
