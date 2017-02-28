@@ -2,7 +2,8 @@
 
 How to use?
 
-1. Import the class `import nl.webresolver.wrclient.*;`
+1. Download the package in `/src/nl/webresolver/wrclient` and import it in your project
+2. Import the class `import nl.webresolver.wrclient.*;`
 
 Function example:
 
